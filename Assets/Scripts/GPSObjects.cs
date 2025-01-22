@@ -54,7 +54,7 @@ public class AddGPSObjects : MonoBehaviour
     {
         // Instantiate the object for later manipulation
         manipulationObject = Instantiate(manipulationPrefab);
-        manipulationObject.transform.localPosition = mainObject.transform.localPosition; // Set initial position if needed
+        manipulationObject.transform.localPosition = mainObject.transform.localPosition;
     }
 
     public Vector2 EastNorthOffset(double latitudeDegreesA, double longitudeDegreesA, double latitudeDegreesB, double longitudeDegreesB)
