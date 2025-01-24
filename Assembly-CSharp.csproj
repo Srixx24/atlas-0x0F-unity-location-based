@@ -65,9 +65,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\WorldObjectsManager.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\Scaler\IndexerVisualisation.cs" />
     <Compile Include="Assets\Scripts\GPSObjects.cs" />
     <Compile Include="Assets\Scripts\ZzzLog.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\TestSequence.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\ScalerProfiles\ScalerProfileListItem.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\Bottleneck\BeeScript.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\HighLevelLoadManager.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\LoadLevel.cs" />
+    <Compile Include="Assets\Scripts\POIManager.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\Scaler\ScalerVisualisation.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\Bottleneck\BottleneckUI.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\MidLevelLoadManager.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\Blockwall\ObjectSpawner.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\Boost\BoostUI.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\SpinLoad.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\ScalerProfiles\ScalerProfileChanger.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\AutoPerfControl.cs" />
     <Compile Include="Assets\Scripts\GamePlayUI.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\SampleFactory.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\ShowFPS.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\ClusterInfo\ClusterInfoTest.cs" />
+    <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\AutoPerfUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -1356,6 +1375,7 @@
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj" />
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.Editor.csproj" />
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.csproj" />
+    <ProjectReference Include="Settings.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

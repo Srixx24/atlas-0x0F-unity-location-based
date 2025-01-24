@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - AR Camera
+  - Top Down Camera
+  - Third Person Camera
   layers:
   - Default
   - TransparentFX
