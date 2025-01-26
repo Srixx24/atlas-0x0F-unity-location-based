@@ -72,6 +72,7 @@
     <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\Bottleneck\BeeScript.cs" />
     <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\HighLevelLoadManager.cs" />
     <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\LoadLevel.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\POIManager.cs" />
     <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\Scaler\ScalerVisualisation.cs" />
     <Compile Include="Assets\Samples\Adaptive Performance\4.0.1\Environment\Bottleneck\BottleneckUI.cs" />
@@ -1233,12 +1234,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Notifications.Unified">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.Unified.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Profiling.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Profiling.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Notifications.Unified">
+      <HintPath>Library\ScriptAssemblies\Unity.Notifications.Unified.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">

@@ -1,18 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CameraViewSwitch : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Button cameraSwitchButton;
+    private int currentSceneIndex = 0;
+
     void Start()
     {
-        
+        cameraSwitchButton.onClick.AddListener(SwitchViews);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SwitchViews()
     {
-        
+        // Increment the scene index
+        currentSceneIndex++;
+
+        // Allow for scene looping
+        if (currentSceneIndex > 2)
+            currentSceneIndex = 0;
+
+        switch (currentSceneIndex)
+        {
+            case 0:
+                SceneManager.LoadScene("Follow View");
+                break;
+            case 1:
+                SceneManager.LoadScene("Map View");
+                break;
+            case 2:
+                SceneManager.LoadScene("AR View");
+                break;
+        }
     }
 }

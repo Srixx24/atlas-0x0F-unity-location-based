@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class GamePlayUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // Placeholder for later use
 
-    // Update is called once per frame
-    void Update()
+
+    void Start()
     {
         
     }

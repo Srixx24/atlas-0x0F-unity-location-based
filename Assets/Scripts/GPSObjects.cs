@@ -1,60 +1,52 @@
 using UnityEngine;
 using Niantic.Lightship.AR.WorldPositioning;
 using System;
+using UnityEngine.SceneManagement;
 
 public class AddGPSObjects : MonoBehaviour
 {
     [SerializeField] ARWorldPositioningObjectHelper positioningHelper;
     [SerializeField] Camera trackingCamera;
-    [SerializeField] GameObject objectPrefab;
-    [SerializeField] GameObject manipulationPrefab;
-
-    double latitude = 36.13069;
-    double longitude = -95.89185;
+    [SerializeField] GameObject playerPrefab;
+    [SerializeField] GameObject petPrefab;
+    double latitude = 36.1540;
+    double longitude = 95.9928;
     double altitude = 0.0;
-
     private GameObject mainObject;
-    private GameObject manipulationObject;
+    private GameObject arObject;
+
 
     void Start()
     {
         // Initialize location service
         Input.location.Start();
 
-        // Instantiate the main object at the initial GPS location
-        mainObject = Instantiate(objectPrefab);
+        // Instantiate the main object at the initial GPS location, may need to adjust later
+        mainObject = Instantiate(playerPrefab);
         mainObject.transform.localScale *= 2.0f; // Scale the main object
         positioningHelper.AddOrUpdateObject(mainObject, latitude, longitude, altitude, Quaternion.identity); // Add to AR system
-
-        InstantiateManipulationObject();
+        arObject = Instantiate(petPrefab);
+        arObject.SetActive(false);
     }
 
     void Update()
-    { 
-        if (mainObject == null)
-        {
-            Debug.LogWarning("mainObject is null!");
-            return;
-        }
-
-        // Update the position of the main object continuously based on current location
-        if (Input.location.isEnabledByUser && Input.location.status == LocationServiceStatus.Running)
-        {
-            double deviceLatitude = Input.location.lastData.latitude;
-            double deviceLongitude = Input.location.lastData.longitude;
-
-            Vector2 eastNorthOffsetMetres = EastNorthOffset(latitude, longitude, deviceLatitude, deviceLongitude);
-            Vector3 trackingOffsetMetres = Quaternion.Euler(0, 0, Input.compass.trueHeading) * new Vector3(eastNorthOffsetMetres.x, (float)altitude, eastNorthOffsetMetres.y);
-            Vector3 trackingMetres = trackingCamera.transform.localPosition + trackingOffsetMetres;
-            mainObject.transform.localPosition = trackingMetres; // Update main object's position
-        }
+    {
+        ManageObjectVisibility();
     }
 
-    private void InstantiateManipulationObject()
+    private void ManageObjectVisibility()
     {
-        // Instantiate the object for later manipulation
-        manipulationObject = Instantiate(manipulationPrefab);
-        manipulationObject.transform.localPosition = mainObject.transform.localPosition;
+        // Manage object visibility based on the active scene
+        if (SceneManager.GetActiveScene().name == "AR View")
+        {
+            arObject.SetActive(true);
+            mainObject.SetActive(false);
+        }
+        else
+        {
+            arObject.SetActive(false);
+            mainObject.SetActive(true);
+        }
     }
 
     public Vector2 EastNorthOffset(double latitudeDegreesA, double longitudeDegreesA, double latitudeDegreesB, double longitudeDegreesB)
