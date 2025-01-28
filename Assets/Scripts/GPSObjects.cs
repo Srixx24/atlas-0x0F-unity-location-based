@@ -23,8 +23,8 @@ public class AddGPSObjects : MonoBehaviour
 
         // Instantiate the main object at the initial GPS location, may need to adjust later
         mainObject = Instantiate(playerPrefab);
-        mainObject.transform.localScale *= 2.0f; // Scale the main object
-        positioningHelper.AddOrUpdateObject(mainObject, latitude, longitude, altitude, Quaternion.identity); // Add to AR system
+        //mainObject.transform.localScale *= 2.0f; // Scale the main object
+        //positioningHelper.AddOrUpdateObject(mainObject, latitude, longitude, altitude, Quaternion.identity); // Add to AR system
         arObject = Instantiate(petPrefab);
         arObject.SetActive(false);
     }
