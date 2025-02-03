@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Follow View.unity
     guid: 644393fd7c7694e40b4e16ae7a5ff493
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/AR View.unity
     guid: ae4f7f6b77035c7498fcd1004e661020
   - enabled: 1

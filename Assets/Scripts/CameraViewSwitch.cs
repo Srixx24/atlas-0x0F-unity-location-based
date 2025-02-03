@@ -27,10 +27,10 @@ public class CameraViewSwitch : MonoBehaviour
                 SceneManager.LoadScene("Follow View");
                 break;
             case 1:
-                SceneManager.LoadScene("AR View");
+                SceneManager.LoadScene("Map View");
                 break;
             case 2:
-                SceneManager.LoadScene("Map View");
+                SceneManager.LoadScene("AR View");
                 break;
         }
     }
