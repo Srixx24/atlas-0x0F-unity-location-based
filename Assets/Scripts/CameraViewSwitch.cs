@@ -18,7 +18,7 @@ public class CameraViewSwitch : MonoBehaviour
         currentSceneIndex++;
 
         // Allow for scene looping
-        if (currentSceneIndex > 1)
+        if (currentSceneIndex > 2)
             currentSceneIndex = 0;
 
         switch (currentSceneIndex)
@@ -29,11 +29,9 @@ public class CameraViewSwitch : MonoBehaviour
             case 1:
                 SceneManager.LoadScene("AR View");
                 break;
-            // Will debug this scene after working through core game
-            // elements first
-            //case 2:
-                //SceneManager.LoadScene("Map View");
-                //break;
+            case 2:
+                SceneManager.LoadScene("Map View");
+                break;
         }
     }
 }
